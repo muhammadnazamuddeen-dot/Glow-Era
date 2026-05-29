@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow Era — Radiance Redefined</title>
+  <meta name="description" content="Glow Era — luxury clean beauty crafted with rare botanicals and modern science. Discover your natural radiance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">Glow <span>Era</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">Story</a></li>
+      <li><a href="blog.html">Journal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="cart.html" title="Cart">
+        <span style="font-size: 1.1rem;">&#128722;</span>
+        <span class="cart-count">0</span>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="hero-tag">✦ Luxury Skincare & Beauty</p>
+      <h1 class="hero-title">
+        Your Skin<br>
+        Deserves to<br>
+        <em>Glow.</em>
+      </h1>
+      <p class="hero-desc">
+        Crafted with rare botanicals and modern science,
+        Glow Era rituals transform your skin —
+        not just its surface, but its story.
+      </p>
+      <div class="hero-actions">
+        <a href="shop.html" class="btn-primary">Explore Collection</a>
+        <a href="about.html" class="btn-ghost">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-visual">
+        <div class="circle-deco c1"></div>
+        <div class="circle-deco c2"></div>
+        <div class="circle-deco c3"></div>
+        <div class="hero-center-text">
+          <span>G</span>
+        </div>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge-item">100% Clean Beauty</div>
+        <div class="hero-badge-item">Cruelty Free</div>
+        <div class="hero-badge-item">Dermatologist Tested</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span>Clean Beauty</span><span class="dot">✦</span>
+      <span>Radiant Skin</span><span class="dot">✦</span>
+      <span>Glow Era</span><span class="dot">✦</span>
+      <span>Cruelty Free</span><span class="dot">✦</span>
+      <span>Botanicals</span><span class="dot">✦</span>
+      <span>Luxury Rituals</span><span class="dot">✦</span>
+      <span>Your Glow Era</span><span class="dot">✦</span>
+      <span>Clean Beauty</span><span class="dot">✦</span>
+      <span>Radiant Skin</span><span class="dot">✦</span>
+      <span>Glow Era</span><span class="dot">✦</span>
+      <span>Cruelty Free</span><span class="dot">✦</span>
+      <span>Botanicals</span><span class="dot">✦</span>
+      <span>Luxury Rituals</span><span class="dot">✦</span>
+      <span>Your Glow Era</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ABOUT PREVIEW -->
+  <section class="about-section" id="about">
+    <div class="about-text reveal">
+      <p class="section-tag">Our Story</p>
+      <h2 class="section-title">Beauty rooted in <em>nature</em>, backed by science.</h2>
+      <p class="section-body">
+        Glow Era was born from a simple belief: that radiance is not a trend — it is your natural state.
+        We blend the finest botanical ingredients with cutting-edge skincare science
+        to create rituals that reveal the skin you were always meant to have.
+      </p>
+      <p class="section-body">
+        Every formula is clean, every ingredient intentional, every product a commitment
+        to the glow that is uniquely, beautifully yours.
+      </p>
+      <a href="about.html" class="btn-primary">Discover Our Story</a>
+    </div>
+    <div class="about-visual reveal reveal-delay-2">
+      <div class="about-block ab1"></div>
+      <div class="about-block ab2"></div>
+      <div class="ab3">
+        <div class="num">28+</div>
+        <div class="label">Active Botanicals</div>
+      </div>
+      <div class="about-deco-line"></div>
+    </div>
+  </section>
+
+  <!-- BEST SELLERS -->
+  <section class="products-section" id="products">
+    <div class="products-header reveal">
+      <div>
+        <p class="section-tag">The Collection</p>
+        <h2 class="section-title">Ritual <em>essentials</em></h2>
+      </div>
+      <a href="shop.html" class="btn-ghost">View All Products</a>
+    </div>
+    <div class="products-grid featured">
+      <!-- Products loaded dynamically from data/products.json -->
+    </div>
+  </section>
+
+  <!-- RITUAL SECTION -->
+  <section class="ritual-section" id="ritual">
+    <div class="ritual-header reveal">
+      <p class="section-tag">The Glow Era Ritual</p>
+      <h2 class="section-title">Four steps to your <em>radiance</em></h2>
+      <p class="section-body">A simple, intentional routine designed to unlock your skin's natural luminosity — morning and night.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div class="step-icon">✿</div>
+        <h3 class="step-title">Cleanse</h3>
+        <p class="step-desc">Begin with our gentle botanical cleanser to remove impurities while preserving your skin barrier.</p>
+        <div class="step-line"></div>
+      </div>
+      <div class="step reveal reveal-delay-1">
+        <div class="step-num">02</div>
+        <div class="step-icon">◈</div>
+        <h3 class="step-title">Tone</h3>
+        <p class="step-desc">Balance and prep your skin with our hydrating essence, rich in floral water and hyaluronic acid.</p>
+        <div class="step-line"></div>
+      </div>
+      <div class="step reveal reveal-delay-2">
+        <div class="step-num">03</div>
+        <div class="step-icon">✦</div>
+        <h3 class="step-title">Treat</h3>
+        <p class="step-desc">Layer your targeted serum for brightening, firming, or deep hydration — tailored to your skin's needs.</p>
+        <div class="step-line"></div>
+      </div>
+      <div class="step reveal reveal-delay-3">
+        <div class="step-num">04</div>
+        <div class="step-icon">✶</div>
+        <h3 class="step-title">Glow</h3>
+        <p class="step-desc">Seal in radiance with our signature moisturiser — your skin's final, luminous transformation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="testimonials-header reveal">
+      <p class="section-tag">Real Results</p>
+      <h2 class="section-title">Loved by those who <em>glow</em></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">My skin has never felt this alive. After two weeks of the Glow Serum, I genuinely looked in the mirror and smiled — something I haven't done in years.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <p class="author-name">Aisha M.</p>
+            <p class="author-title">Verified Buyer · Karachi</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">The Velvet Skin Cream is unlike anything I've tried. So luxurious, absorbs beautifully, and my skin barrier has completely healed. Worth every penny.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">S</div>
+          <div>
+            <p class="author-name">Sara L.</p>
+            <p class="author-title">Verified Buyer · Dubai</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">Glow Era changed how I approach skincare. It's not just products — it's a whole ritual. I feel like I'm truly taking care of myself for the first time.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">N</div>
+          <div>
+            <p class="author-name">Nadia R.</p>
+            <p class="author-title">Verified Buyer · London</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section">
+    <p class="section-tag reveal">Stay in the Glow</p>
+    <h2 class="section-title reveal">Join the <em>Glow Era</em></h2>
+    <p class="section-body reveal">Be the first to know about new rituals, exclusive offers, and skincare secrets delivered to your inbox.</p>
+    <form class="newsletter-form reveal">
+      <input type="email" placeholder="Your email address">
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Glow <span>Era</span></a>
+        <p class="footer-desc">Luxury clean beauty crafted for those who believe their skin deserves the very best. Botanical-powered. Science-backed. Beautifully yours.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link">ig</a>
+          <a href="#" class="social-link">tw</a>
+          <a href="#" class="social-link">fb</a>
+          <a href="#" class="social-link">yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="shop.html">Skincare</a></li>
+          <li><a href="shop.html">Makeup</a></li>
+          <li><a href="shop.html">Wellness</a></li>
+          <li><a href="shop.html">Gift Sets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 <span>Glow Era</span>. All rights reserved.</p>
+      <p class="footer-copy">Made with ✦ for radiant skin</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</body>
+</html>

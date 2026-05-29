@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post — Glow Era</title>
+  <meta name="description" content="Read the latest from Glow Era beauty journal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">Glow <span>Era</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">Story</a></li>
+      <li><a href="blog.html" class="active">Journal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="cart.html" title="Cart">
+        <span style="font-size: 1.1rem;">&#128722;</span>
+        <span class="cart-count">0</span>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Blog Post Container -- loaded dynamically from data/blog-posts.json -->
+  <article class="blog-post-page">
+    <div class="blog-post-container">
+      <!-- Post loaded via JS based on ?id= parameter -->
+    </div>
+  </article>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <p class="section-tag reveal">Enjoyed This?</p>
+    <h2 class="section-title reveal">Get More Delivered to <em>Your Inbox</em></h2>
+    <p class="section-body reveal">Subscribe for weekly beauty tips, product launches, and exclusive offers.</p>
+    <form class="newsletter-form reveal">
+      <input type="email" placeholder="Your email address">
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Glow <span>Era</span></a>
+        <p class="footer-desc">Luxury clean beauty crafted for those who believe their skin deserves the very best. Botanical-powered. Science-backed. Beautifully yours.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link">ig</a>
+          <a href="#" class="social-link">tw</a>
+          <a href="#" class="social-link">fb</a>
+          <a href="#" class="social-link">yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="shop.html">Skincare</a></li>
+          <li><a href="shop.html">Makeup</a></li>
+          <li><a href="shop.html">Wellness</a></li>
+          <li><a href="shop.html">Gift Sets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 <span>Glow Era</span>. All rights reserved.</p>
+      <p class="footer-copy">Made with ✦ for radiant skin</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</body>
+</html>

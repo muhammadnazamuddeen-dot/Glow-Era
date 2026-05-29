@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow Era — Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f0eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .admin-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 3rem;
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    }
+    .admin-card h1 {
+      font-family: Georgia, serif;
+      font-size: 2rem;
+      color: #1a1a1a;
+      margin-bottom: 0.25rem;
+    }
+    .admin-card h1 span { color: #c9a96e; }
+    .admin-card p {
+      color: #757575;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+    .admin-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .admin-links a {
+      display: block;
+      padding: 0.85rem 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      text-decoration: none;
+      color: #333;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+    .admin-links a:hover {
+      border-color: #c9a96e;
+      background: #faf3eb;
+    }
+    .admin-links .primary {
+      background: #d4a0a0;
+      color: #fff;
+      border-color: #d4a0a0;
+    }
+    .admin-links .primary:hover {
+      background: #c08080;
+      border-color: #c08080;
+    }
+    .admin-footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #9e9e9e;
+    }
+    .admin-footer a { color: #c9a96e; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="admin-card">
+    <h1>Glow <span>Era</span></h1>
+    <p>Admin Dashboard — Manage your products and blog</p>
+    <div class="admin-links">
+      <a href="./" class="primary">🔐 Go to Admin Dashboard</a>
+      <a href="../index.html" target="_blank">🏠 View Website</a>
+      <a href="../shop.html" target="_blank">🛍️ View Shop</a>
+      <a href="../blog.html" target="_blank">📝 View Blog</a>
+    </div>
+    <div class="admin-footer">
+      <p>Already logged in? <a href="./">Open Admin Dashboard →</a></p>
+      <p style="margin-top: 0.5rem;">Powered by <a href="https://decapcms.org" target="_blank">Decap CMS</a> &amp; <a href="https://netlify.com" target="_blank">Netlify</a></p>
+    </div>
+  </div>
+
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- Decap CMS Script — handles auth & renders admin UI -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Show Netlify Identity login button if not logged in
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', function(user) {
+        if (!user) {
+          window.netlifyIdentity.on('login', function() {
+            document.location.href = './';
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

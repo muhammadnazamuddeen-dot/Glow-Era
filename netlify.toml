@@ -1,0 +1,31 @@
+# Netlify Deployment Config — Glow Era
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  publish = "."
+  command = "echo 'Static site — no build required'"
+
+# Redirect /admin to load Decap CMS
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+
+# Redirect /admin/* to load Decap CMS
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Identity redirect for OAuth
+[[redirects]]
+  from = "/.netlify/identity/*"
+  to = "https://identity.netlify.com/.netlify/identity/:splat"
+  status = 200
+
+# Enable Git Gateway for Decap CMS
+# ⚠️ IMPORTANT: Enable Netlify Identity in the Netlify Dashboard:
+#    Site Settings → Identity → Enable
+#    Then enable Git Gateway under Identity Settings
+[build.processing]
+  skip_processing = false

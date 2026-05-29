@@ -1,0 +1,107 @@
+# Netlify CMS Configuration — Glow Era
+# https://www.netlifycms.org/docs/configuration-options/
+
+backend:
+  name: git-gateway
+  branch: main
+  accept_roles:
+    - admin
+
+# After deploying, replace with your actual Netlify URL (e.g., https://glowera.netlify.app)
+# You can also use a custom domain here.
+site_url: https://YOUR-SITE-NAME.netlify.app
+display_url: https://YOUR-SITE-NAME.netlify.app
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  ##############################
+  # SITE SETTINGS
+  ##############################
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "data/settings.json"
+        description: "Edit announcement bar, hero banner, and contact info"
+        format: "json"
+        fields:
+          - label: "Announcement Bar"
+            name: "announcement"
+            widget: "string"
+            hint: "Text shown in the top bar across all pages"
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Badge Text", name: "badge", widget: "string" }
+              - { label: "Main Title", name: "title", widget: "string" }
+              - { label: "Highlighted Word", name: "titleHighlight", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+
+  ##############################
+  # PRODUCTS
+  ##############################
+  - name: "products"
+    label: "🛍️ Products"
+    label_singular: "Product"
+    description: "Manage your shop products"
+    files:
+      - name: "all-products"
+        label: "All Products"
+        file: "data/products.json"
+        format: "json"
+        fields:
+          - label: "Products"
+            name: "products"
+            widget: "list"
+            hint: "Add, edit, or remove products"
+            summary: "{{fields.name}} — ${{fields.price}}"
+            fields:
+              - { label: "Product ID", name: "id", widget: "string", hint: "Unique identifier (e.g., radiance-serum)" }
+              - { label: "Product Name", name: "name", widget: "string" }
+              - { label: "Category", name: "category", widget: "select", options: ["skincare", "makeup", "wellness", "gifts"] }
+              - { label: "Price ($)", name: "price", widget: "number", value_type: "float", min: 0, step: 0.5 }
+              - { label: "Original Price ($) — for sales", name: "originalPrice", widget: "number", value_type: "float", required: false, min: 0, step: 0.5 }
+              - { label: "Rating", name: "rating", widget: "number", default: 5, min: 0, max: 5, step: 0.5 }
+              - { label: "Review Count", name: "reviews", widget: "number", default: 0, min: 0 }
+              - { label: "Badge", name: "badge", widget: "select", options: ["", "Best Seller", "New", "Limited", "Sold Out"], required: false }
+              - { label: "Featured on Home", name: "featured", widget: "boolean", default: false, hint: "Show on the homepage best sellers section" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Image Emoji", name: "image", widget: "string", hint: "Emoji placeholder (e.g., 🧴). Replace with image later." }
+              - { label: "Image Background", name: "imageBg", widget: "string", hint: "CSS gradient for placeholder (e.g., linear-gradient(...))" }
+
+  ##############################
+  # BLOG POSTS
+  ##############################
+  - name: "blog"
+    label: "📝 Blog Posts"
+    label_singular: "Blog Post"
+    description: "Write and manage your blog posts"
+    files:
+      - name: "all-posts"
+        label: "All Posts"
+        file: "data/blog-posts.json"
+        format: "json"
+        fields:
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+            hint: "Add, edit, or remove blog posts"
+            summary: "{{fields.title}} — {{fields.date}}"
+            fields:
+              - { label: "Post ID", name: "id", widget: "string", hint: "URL-friendly ID (e.g., morning-skincare-routine)" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Category", name: "category", widget: "select", options: ["Skincare", "Makeup", "Wellness", "Lifestyle"] }
+              - { label: "Author", name: "author", widget: "string", default: "Glow Era" }
+              - { label: "Date", name: "date", widget: "string", hint: "e.g., March 15, 2026" }
+              - { label: "Read Time", name: "readTime", widget: "string", hint: "e.g., 4 min read" }
+              - { label: "Excerpt", name: "excerpt", widget: "text", hint: "Short summary for the blog listing page" }
+              - { label: "Full Content (HTML)", name: "content", widget: "markdown", hint: "Write your full blog post here. Supports bold, italic, headings, lists, and blockquotes." }
+              - { label: "Image Emoji", name: "image", widget: "string", hint: "Emoji placeholder" }
+              - { label: "Image Background", name: "imageBg", widget: "string", hint: "CSS gradient" }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — Glow Era</title>
+  <meta name="description" content="Browse our full collection of clean beauty products. Skincare, makeup, and wellness essentials for your natural radiance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">Glow <span>Era</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="about.html">Story</a></li>
+      <li><a href="blog.html">Journal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="cart.html" title="Cart">
+        <span style="font-size: 1.1rem;">&#128722;</span>
+        <span class="cart-count">0</span>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <p class="section-tag">The Collection</p>
+    <h1>Ritual <em>Essentials</em></h1>
+    <p>Discover clean beauty products crafted for your unique glow. Each formula, a masterpiece.</p>
+  </section>
+
+  <!-- Shop Filters -->
+  <section class="products-section" style="background: var(--cream); padding-top: 3rem;">
+    <div class="shop-header reveal">
+      <div class="shop-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="skincare">Skincare</button>
+        <button class="filter-btn" data-filter="makeup">Makeup</button>
+        <button class="filter-btn" data-filter="wellness">Wellness</button>
+        <button class="filter-btn" data-filter="gifts">Gift Sets</button>
+      </div>
+    </div>
+    <div class="products-grid shop-grid">
+      <!-- Products loaded dynamically from data/products.json -->
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <p class="section-tag reveal">Get 10% Off</p>
+    <h2 class="section-title reveal">Join the <em>Glow Family</em></h2>
+    <p class="section-body reveal">Subscribe for exclusive discounts, beauty tips, and first access to new arrivals.</p>
+    <form class="newsletter-form reveal">
+      <input type="email" placeholder="Your email address">
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Glow <span>Era</span></a>
+        <p class="footer-desc">Luxury clean beauty crafted for those who believe their skin deserves the very best. Botanical-powered. Science-backed. Beautifully yours.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link">ig</a>
+          <a href="#" class="social-link">tw</a>
+          <a href="#" class="social-link">fb</a>
+          <a href="#" class="social-link">yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="shop.html">Skincare</a></li>
+          <li><a href="shop.html">Makeup</a></li>
+          <li><a href="shop.html">Wellness</a></li>
+          <li><a href="shop.html">Gift Sets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 <span>Glow Era</span>. All rights reserved.</p>
+      <p class="footer-copy">Made with ✦ for radiant skin</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</body>
+</html>

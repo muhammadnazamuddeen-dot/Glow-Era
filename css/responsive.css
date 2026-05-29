@@ -1,0 +1,137 @@
+/* ============================================
+   Glow Era — Responsive Design
+   ============================================ */
+
+/* ----- Tablet: 900px ----- */
+@media (max-width: 900px) {
+  .navbar { padding: 1.5rem 2rem; }
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .hamburger { display: flex; }
+
+  /* Hero */
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { height: 300px; }
+  .hero-left { padding: 8rem 2rem 4rem; }
+  .hero-title { font-size: clamp(2.5rem, 8vw, 3.5rem); }
+  .hero-center-text span { font-size: 6rem; }
+  .hero-badges { left: 1.5rem; bottom: 1.5rem; }
+
+  /* About (home) */
+  .about-section { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 2rem; }
+  .about-visual { height: 320px; }
+
+  /* Products */
+  .products-section { padding: 4rem 2rem; }
+  .products-grid { grid-template-columns: 1fr 1fr; }
+  .products-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+
+  /* Ritual */
+  .ritual-section { padding: 5rem 2rem; }
+  .steps { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .step-line { display: none; }
+
+  /* Testimonials */
+  .testimonials-section { padding: 5rem 2rem; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+
+  /* Newsletter */
+  .newsletter-section { padding: 4rem 2rem; }
+  .newsletter-form { flex-direction: column; gap: 0.5rem; }
+  .newsletter-form input { width: 100%; }
+  .newsletter-form button { width: 100%; }
+
+  /* Page Hero */
+  .page-hero { padding: 8rem 2rem 3rem; }
+
+  /* About Page */
+  .story-section { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 2rem; }
+  .story-visual { height: 300px; }
+  .values-section { padding: 4rem 2rem; }
+  .values-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .team-section { padding: 4rem 2rem; }
+  .team-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+  /* Shop */
+  .shop-header { padding: 0 2rem; }
+  .shop-filters { gap: 0.5rem; }
+
+  /* Product Detail */
+  .product-detail-section { padding: 3rem 2rem; }
+  .product-detail-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .product-main-image { height: 350px; }
+
+  /* Blog */
+  .blog-section { padding: 3rem 2rem 4rem; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .blog-post-page { padding: 4rem 2rem; }
+  .blog-post-image { height: 250px; }
+
+  /* Contact */
+  .contact-section { padding: 4rem 2rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+  /* Cart */
+  .cart-page-section { padding: 3rem 2rem 4rem; }
+  .cart-content { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer { padding: 4rem 2rem 2rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+
+/* ----- Mobile Hamburger Nav (expanded) ----- */
+@media (max-width: 900px) {
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0; right: 0;
+    width: 280px; height: 100vh;
+    background: var(--cream);
+    padding: 6rem 2rem 2rem;
+    z-index: 99;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.08);
+    gap: 1.5rem;
+  }
+  .nav-links.active a { font-size: 0.9rem; }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .nav-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 98;
+  }
+  .nav-overlay.active { display: block; }
+}
+
+/* ----- Mobile: 480px ----- */
+@media (max-width: 480px) {
+  .products-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 2.2rem; }
+  .hero-actions { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .hero-badges { display: none; }
+  .about-visual { height: 250px; }
+  .ab1 { width: 200px; height: 280px; left: 20px; }
+  .ab2 { width: 140px; height: 200px; }
+  .ab3 { width: 180px; }
+  .product-main-image { height: 280px; }
+  .product-detail-grid { gap: 1.5rem; }
+  .product-actions-detail { flex-direction: column; }
+  .cart-item { grid-template-columns: 60px 1fr; gap: 1rem; }
+  .cart-item-actions { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; }
+}
