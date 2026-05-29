@@ -9,8 +9,8 @@ backend:
 
 # After deploying, replace with your actual Netlify URL (e.g., https://glowera.netlify.app)
 # You can also use a custom domain here.
-site_url: https://YOUR-SITE-NAME.netlify.app
-display_url: https://YOUR-SITE-NAME.netlify.app
+site_url: https://glowerabytayba.netlify.app
+display_url: https://glowerabytayba.netlify.app
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
